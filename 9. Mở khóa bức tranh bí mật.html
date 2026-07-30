@@ -294,6 +294,7 @@
           <div><h1>BỨC TRANH BÍ ẨN</h1><p>TRẢ LỜI ĐÚNG – LẬT MỞ MẢNH GHÉP – GIẢI MÃ BỨC TRANH</p></div>
         </div>
         <div class="top-actions">
+          <button class="soft-btn" id="allGamesBtn">Tất cả các trò chơi</button>
           <button class="soft-btn" id="restoreBtn" title="Khôi phục lượt đang chơi"><span>Khôi phục</span> ↻</button>
           <button class="icon-btn" id="audioSetupBtn" title="Thiết lập âm thanh" aria-label="Thiết lập âm thanh">♫</button>
           <button class="icon-btn" id="setupFsBtn" title="Toàn màn hình" aria-label="Toàn màn hình">⛶</button>
@@ -1211,6 +1212,7 @@
     $("#exportQuestionsBtn").onclick=()=>window.exportQuestions();$("#tileMode").onchange=renderGridPreview;$("#mappingMode").onchange=renderGridPreview;
     $("#guessRule").onchange=()=>$("#minimumField").classList.toggle("hidden",$("#guessRule").value!=="minimum");
     $("#startGameBtn").onclick=()=>startGame(false);$("#loadSampleBtn").onclick=()=>{state.questions=clone(SAMPLE_QUESTIONS);state.image=sampleImage;state.secretAnswer="Ngôi đền ánh sáng";state.secretHint="Một công trình cổ ẩn trong rừng";syncAllUi();toast("Đã nạp dữ liệu mẫu.","good")};
+    $("#allGamesBtn").onclick=()=>{window.location.href="index.html"};
     $("#restoreBtn").onclick=()=>{if(!loadState())return toast("Chưa có lượt chơi đã lưu.","bad");if(state.isPlaying||state.startedAt)startGame(true);else toast("Đã khôi phục cấu hình gần nhất.","good")};
     $("#puzzleGrid").onclick=e=>{const t=e.target.closest(".tile");if(t)selectTile(Number(t.dataset.tile))};$("#confirmAnswerBtn").onclick=()=>checkAnswer();
     $("#guessBtn").onclick=openGuess;$("#closeGuessBtn").onclick=()=>$("#guessModal").classList.add("hidden");$("#submitGuessBtn").onclick=submitGuess;$("#guessInput").onkeydown=e=>{if(e.key==="Enter")submitGuess()};

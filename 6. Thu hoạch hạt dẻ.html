@@ -1427,7 +1427,8 @@
               id="setupHomeBtn">Thiết lập đội</button><button class="btn ghost" id="questionsHomeBtn">Thiết lập câu
               hỏi</button><button class="btn ghost" id="pasteHomeBtn">Dán câu hỏi</button><button class="btn ghost"
               id="importHomeBtn">Nhập tệp</button><button class="btn ghost" id="guideBtn">Hướng dẫn</button><button
-              class="btn ghost hidden" id="continueBtn">Tiếp tục lượt chơi</button></div>
+              class="btn ghost" id="allGamesBtn">Tất cả các trò chơi</button><button class="btn ghost hidden"
+              id="continueBtn">Tiếp tục lượt chơi</button></div>
         </section>
         <div class="hero-art" aria-hidden="true">
           <div class="hero-squirrel"></div>
@@ -3171,6 +3172,7 @@
         $('#pasteHomeBtn').onclick = () => this.openPaste();
         $('#importHomeBtn').onclick = () => this.openImport();
         $('#guideBtn').onclick = () => this.openDialog('guideDialog');
+        $('#allGamesBtn').onclick = () => { window.location.href = 'index.html'; };
         $('#continueBtn').onclick = () => this.resumeSaved();
         $('#questionManagerBtn').onclick = () => this.openQuestions();
         $('#diagnosticsBtn').onclick = () => this.openDiagnostics();

@@ -208,6 +208,7 @@
         <button class="btn btn-primary" id="quickStart"><svg viewBox="0 0 24 24"><path d="m8 5 11 7-11 7z"/></svg>BẮT ĐẦU VỚI BỘ MẪU</button>
         <button class="btn btn-secondary" data-open="setupDialog"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg>NHẬP TỪ KHÓA</button>
         <button class="btn btn-ghost" id="continueBtn"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v6h6"/></svg>TIẾP TỤC LƯỢT CŨ</button>
+        <button class="btn btn-ghost" id="allGamesBtn">Tất cả các trò chơi</button>
       </div>
       <div class="home-note">
         <span class="note-chip">Tự sinh ma trận hợp lệ</span><span class="note-chip">Kéo hoặc chạm hai đầu</span><span class="note-chip">Chạy offline một tệp</span>
@@ -1055,6 +1056,7 @@
       $("#loadSample").onclick=()=>{this.setWords(sampleWords);this.renderPreview()};
       $("#clearWords").onclick=()=>{this.setWords([]);this.renderPreview()};
       $("#quickStart").onclick=()=>{this.setWords(sampleWords);this.generateAndStart()};
+      $("#allGamesBtn").onclick=()=>{window.location.href="index.html"};
       $("#previewGridBtn").onclick=()=>this.generate(false);
       $("#startFromSetup").onclick=()=>this.generateAndStart();
       $("#gridSize").onchange=e=>{this.settings.gridSize=e.target.value;this.saveSettings()};
