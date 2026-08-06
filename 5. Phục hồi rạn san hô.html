@@ -315,6 +315,41 @@ body.playing .audio-volume-control .icon{min-height:32px;height:32px;width:32px}
 @media(max-width:620px){.audio-volume-control{gap:2px;height:38px;padding:0 4px}.audio-volume-control .icon,body.playing .audio-volume-control .icon{width:28px;height:28px;min-height:28px;font-size:16px}.audio-volume-value{min-width:34px;font-size:9px}}
 @media(max-width:430px){.audio-volume-value{display:none}.audio-volume-control{padding:0 3px}}
 
+/* ===== FINAL READABILITY — larger classroom text ===== */
+body.playing .question-text{font-size:clamp(1.35rem,2.1vw,2rem);line-height:1.2}
+body.playing .question-text.long{font-size:clamp(1.12rem,1.65vw,1.55rem);line-height:1.2}
+body.playing .answer{font-size:clamp(.95rem,1.25vw,1.13rem);line-height:1.22;padding-inline:12px}
+body.playing .answer .mark{flex-basis:28px;width:28px;height:28px;font-size:.92rem}
+body.playing .fillrow input{font-size:1.08rem}
+body.playing .feedback{font-size:.82rem;line-height:1.35}
+body.playing .type-tag,body.playing .task-tag{font-size:.68rem}
+body.playing .qfoot .btn{font-size:.78rem}
+body.playing .hud-title{font-size:.78rem}
+body.playing .hud-stats{font-size:.7rem}
+body.playing .mission-card strong{font-size:.86rem}
+body.playing .mission-card span{font-size:.58rem}
+body.playing .stage-pill{font-size:.52rem}
+@media(max-width:720px){
+  body.playing .question-text{font-size:clamp(1.05rem,4.8vw,1.25rem)}
+  body.playing .question-text.long{font-size:clamp(.92rem,4.2vw,1.08rem)}
+  body.playing .answer{font-size:clamp(.92rem,3.8vw,1.05rem);line-height:1.18;padding-inline:8px}
+  body.playing .answer .mark{flex-basis:24px;width:24px;height:24px;font-size:.78rem}
+  body.playing .fillrow input{font-size:1rem}
+  body.playing .feedback{font-size:.72rem}
+  body.playing .qfoot .btn{font-size:.7rem}
+  body.playing .type-tag,body.playing .task-tag{font-size:.56rem}
+  body.playing .hud-title{font-size:.66rem}
+  body.playing .hud-stats{font-size:.55rem}
+  body.playing .mission-card strong{font-size:.68rem}
+  body.playing .mission-card span{font-size:.48rem}
+  body.playing .stage-pill{font-size:.44rem}
+}
+@media(max-height:620px) and (orientation:landscape){
+  body.playing .question-text{font-size:1rem}
+  body.playing .answer{font-size:.84rem}
+  body.playing .feedback{font-size:.7rem}
+}
+
 </style>
 </head>
 <body>
@@ -323,14 +358,14 @@ body.playing .audio-volume-control .icon{min-height:32px;height:32px;width:32px}
 
 <main id="homeScreen" class="screen home">
   <div class="ocean-stage" aria-hidden="true"><div class="world" id="homeWorld"></div><div class="bubble-field" id="homeBubbles"></div><div class="guide" id="homeGuide" style="--gx:80%;--gy:46%"></div></div><div class="home-shade"></div>
-  <section class="hero"><div class="hero-copy"><span class="eyebrow">🌊 Hành trình học tập dưới đại dương</span><h1>Phục hồi <span>rạn san hô</span></h1><p>Trả lời đúng – Làm sạch đại dương – Hồi sinh rạn san hô.</p><div class="hero-actions"><button class="btn coral" id="journeyBtn">Bắt đầu hành trình</button><button class="btn primary" id="setupBtn">Thiết lập câu hỏi</button><button class="btn ghost hidden" id="continueBtn">Tiếp tục lượt chơi</button><button class="btn ghost" id="allGamesBtn">Tất cả các trò chơi</button></div><div class="hero-actions"><button class="btn small ghost" id="pasteHomeBtn">Dán câu hỏi</button><button class="btn small ghost" id="importHomeBtn">Nhập tệp</button><button class="btn small ghost" id="characterHomeBtn">Chọn nhân vật</button><button class="btn small ghost" id="guideBtn">Hướng dẫn</button></div><div class="story-card">“Rạn san hô từng là ngôi nhà rực rỡ của nhiều sinh vật biển. Em hãy cùng người bạn dưới biển hoàn thành các thử thách kiến thức để làm sạch đại dương, trồng lại san hô và đưa các sinh vật trở về.”</div><div class="hero-badges"><span class="glass-chip">✓ Chạy ngoại tuyến</span><span class="glass-chip">✓ 9 dạng câu hỏi</span><span class="glass-chip">✓ Chuột & cảm ứng</span><span class="glass-chip">✓ Tự lưu tiến độ</span></div></div></section>
+  <section class="hero"><div class="hero-copy"><span class="eyebrow">🌊 Hành trình học tập dưới đại dương</span><h1>Phục hồi <span>rạn san hô</span></h1><p>Trả lời đúng – Làm sạch đại dương – Hồi sinh rạn san hô.</p><div class="hero-actions"><button class="btn coral" id="journeyBtn">Bắt đầu hành trình</button><button class="btn primary" id="setupBtn">Thiết lập câu hỏi</button><button class="btn ghost hidden" id="continueBtn">Tiếp tục lượt chơi</button><button class="btn ghost" id="allGamesBtn">Tất cả các trò chơi</button></div><div class="hero-actions"><button class="btn small ghost" id="pasteHomeBtn">Dán câu hỏi</button><button class="btn small ghost" id="importHomeBtn">Nhập tệp</button><button class="btn small ghost" id="characterHomeBtn">Chọn nhân vật</button><button class="btn small ghost" id="guideBtn">Hướng dẫn</button></div><div class="story-card">“Rạn san hô từng là ngôi nhà rực rỡ của nhiều sinh vật biển. Em hãy cùng người bạn dưới biển hoàn thành các thử thách kiến thức để làm sạch đại dương, trồng lại san hô và đưa các sinh vật trở về.”</div><div class="hero-badges"><span class="glass-chip">✓ Chạy ngoại tuyến</span><span class="glass-chip">✓ 8 dạng câu hỏi</span><span class="glass-chip">✓ Chuột & cảm ứng</span><span class="glass-chip">✓ Tự lưu tiến độ</span></div></div></section>
 </main>
 
 <main id="setupScreen" class="screen setup hidden"><div class="shell"><div class="page-head"><div><h2>Chuẩn bị hành trình</h2><p>Thiết lập lớp học, chọn bạn đồng hành và quản lý bộ câu hỏi.</p></div><button class="btn ghost" id="backHomeBtn">← Trang chủ</button></div>
 <div class="setup-grid"><section class="card"><div class="card-head"><h3>Thông tin & luật chơi</h3><span class="qmeta">Bước 1</span></div><div class="card-body"><div class="field-grid">
 <div class="field"><label for="lesson">Tên bài học</label><input id="lesson" value="Khám phá và bảo vệ đại dương"></div><div class="field"><label for="subject">Môn học</label><input id="subject" value="Khoa học tự nhiên"></div><div class="field"><label for="className">Lớp</label><input id="className" placeholder="Ví dụ: 6A"></div><div class="field"><label for="teacher">Giáo viên</label><input id="teacher"></div><div class="field"><label for="player">Người chơi / tên lớp</label><input id="player" value="Lớp của chúng ta"></div><div class="field"><label for="questionCount">Số câu cần chơi</label><input id="questionCount" type="number" min="1" max="100" value="15"></div><div class="field"><label for="timerSeconds">Thời gian mỗi câu (giây, 0 = không giới hạn)</label><input id="timerSeconds" type="number" min="0" max="300" value="30"></div><div class="field"><label for="pointsPerQuestion">Điểm mặc định</label><input id="pointsPerQuestion" type="number" min="1" max="1000" value="100"></div><div class="field"><label for="quality">Chất lượng đồ họa</label><select id="quality"><option value="auto">Tự động</option><option value="high">Cao</option><option value="medium">Trung bình</option><option value="low">Thấp</option></select></div><div class="field"><label for="fontScale">Cỡ chữ</label><select id="fontScale"><option value="1">Tiêu chuẩn</option><option value="1.12">Lớn</option><option value="1.24">Rất lớn</option></select></div><div class="field full"><label for="volume">Âm lượng</label><input id="volume" type="range" min="0" max="1" step="0.05" value="0.7"></div></div><div class="checks"><label class="check"><input id="allowRetry" type="checkbox" checked> Cho phép trả lời lại</label><label class="check"><input id="showAnswer" type="checkbox" checked> Hiện đáp án</label><label class="check"><input id="showExplanation" type="checkbox" checked> Hiện lời giải</label><label class="check"><input id="autoNext" type="checkbox" checked> Tự chuyển sau hoạt ảnh</label><label class="check"><input id="shuffleQuestions" type="checkbox" checked> Xáo câu hỏi</label><label class="check"><input id="shuffleAnswers" type="checkbox"> Xáo phương án</label><label class="check"><input id="ignoreAccents" type="checkbox" checked> Điền khuyết bỏ qua dấu</label><label class="check"><input id="soundEnabled" type="checkbox" checked> Hiệu ứng âm thanh</label><label class="check"><input id="musicEnabled" type="checkbox" checked> Nhạc nền sôi động</label><label class="check"><input id="reduceMotion" type="checkbox"> Giảm chuyển động</label><label class="check"><input id="highContrast" type="checkbox"> Tương phản cao</label></div></div></section>
-<section class="card"><div class="card-head"><h3>Chọn bạn đồng hành</h3><span class="qmeta">Bước 2</span></div><div class="card-body"><div class="character-grid" id="characterGrid"></div><p class="qmeta" style="margin-top:12px">Nhân vật sẽ bơi, suy nghĩ, thu gom rác, trồng san hô và gọi sinh vật trở lại.</p><hr style="border:0;border-top:1px solid var(--line);margin:16px 0"><h3 style="margin:0 0 10px">Chọn câu hỏi</h3><div class="checks"><label class="check"><input id="selectAllQuestions" type="checkbox" checked> Chọn toàn bộ</label><label class="check"><input id="randomSelection" type="checkbox"> Chọn ngẫu nhiên</label></div><div class="field-grid" style="margin-top:10px"><div class="field"><label for="selectType">Theo dạng</label><select id="selectType"><option value="all">Tất cả</option><option value="single">Một đáp án</option><option value="multi">Nhiều đáp án</option><option value="tf">Đúng – Sai</option><option value="fill">Điền khuyết</option><option value="pair">Ghép cặp</option><option value="classify">Phân loại</option><option value="order">Sắp xếp</option></select></div><div class="field"><label for="selectLevel">Theo mức độ</label><select id="selectLevel"><option value="all">Tất cả</option><option value="Nhận biết">Nhận biết</option><option value="Thông hiểu">Thông hiểu</option><option value="Vận dụng">Vận dụng</option></select></div></div></div></section></div>
-<section class="card question-card"><div class="card-head"><div><h3>Ngân hàng câu hỏi</h3><div class="qmeta" id="questionSummary"></div></div><div><button class="btn small ghost" id="importBtn">Nhập tệp</button> <button class="btn small primary" id="addQuestionBtn">+ Thêm câu</button></div></div><div class="qtools"><input class="search" id="qSearch" placeholder="Tìm nội dung, chủ đề…"><select id="qTypeFilter"><option value="all">Tất cả dạng</option><option value="single">Một đáp án</option><option value="multi">Nhiều đáp án</option><option value="tf">Đúng – Sai</option><option value="fill">Điền khuyết</option><option value="short">Trả lời ngắn</option><option value="pair">Ghép cặp</option><option value="classify">Phân loại</option><option value="order">Sắp xếp</option><option value="image">Có hình ảnh</option></select><select id="qLevelFilter"><option value="all">Tất cả mức độ</option><option value="Nhận biết">Nhận biết</option><option value="Thông hiểu">Thông hiểu</option><option value="Vận dụng">Vận dụng</option></select><button class="btn small ghost" id="exportQuestionsBtn">Xuất JSON</button><button class="btn small warn" id="clearSamplesBtn">Xóa câu mẫu</button></div><div class="q-list" id="questionList"></div>
+<section class="card"><div class="card-head"><h3>Chọn bạn đồng hành</h3><span class="qmeta">Bước 2</span></div><div class="card-body"><div class="character-grid" id="characterGrid"></div><p class="qmeta" style="margin-top:12px">Nhân vật sẽ bơi, suy nghĩ, thu gom rác, trồng san hô và gọi sinh vật trở lại.</p><hr style="border:0;border-top:1px solid var(--line);margin:16px 0"><h3 style="margin:0 0 10px">Chọn câu hỏi</h3><div class="checks"><label class="check"><input id="selectAllQuestions" type="checkbox" checked> Chọn toàn bộ</label><label class="check"><input id="randomSelection" type="checkbox"> Chọn ngẫu nhiên</label></div><div class="field-grid" style="margin-top:10px"><div class="field"><label for="selectType">Theo dạng</label><select id="selectType"><option value="all">Tất cả</option><option value="single">Một đáp án</option><option value="multi">Nhiều đáp án</option><option value="tf">Đúng – Sai</option><option value="fill">Điền khuyết</option><option value="classify">Phân loại</option><option value="order">Sắp xếp</option></select></div><div class="field"><label for="selectLevel">Theo mức độ</label><select id="selectLevel"><option value="all">Tất cả</option><option value="Nhận biết">Nhận biết</option><option value="Thông hiểu">Thông hiểu</option><option value="Vận dụng">Vận dụng</option></select></div></div></div></section></div>
+<section class="card question-card"><div class="card-head"><div><h3>Ngân hàng câu hỏi</h3><div class="qmeta" id="questionSummary"></div></div><div><button class="btn small ghost" id="importBtn">Nhập tệp</button> <button class="btn small primary" id="addQuestionBtn">+ Thêm câu</button></div></div><div class="qtools"><input class="search" id="qSearch" placeholder="Tìm nội dung, chủ đề…"><select id="qTypeFilter"><option value="all">Tất cả dạng</option><option value="single">Một đáp án</option><option value="multi">Nhiều đáp án</option><option value="tf">Đúng – Sai</option><option value="fill">Điền khuyết</option><option value="short">Trả lời ngắn</option><option value="classify">Phân loại</option><option value="order">Sắp xếp</option><option value="image">Có hình ảnh</option></select><select id="qLevelFilter"><option value="all">Tất cả mức độ</option><option value="Nhận biết">Nhận biết</option><option value="Thông hiểu">Thông hiểu</option><option value="Vận dụng">Vận dụng</option></select><button class="btn small ghost" id="exportQuestionsBtn">Xuất JSON</button><button class="btn small warn" id="clearSamplesBtn">Xóa câu mẫu</button></div><div class="q-list" id="questionList"></div>
 <details class="paste-box" id="pasteDetails"><summary>DÁN NỘI DUNG CÂU HỎI</summary><div class="paste-grid"><div><textarea id="pasteText" placeholder="Câu 1: Sinh vật nào thường sống trong rạn san hô?&#10;A. Cá hề&#10;B. Gấu nâu&#10;C. Hươu&#10;D. Đại bàng&#10;Đáp án: A&#10;Giải thích: Cá hề sống gần rạn san hô."></textarea><div style="display:flex;gap:7px;margin-top:8px"><button class="btn small primary" id="parseBtn">Phân tích câu hỏi</button><button class="btn small ghost" id="insertParsedBtn" disabled>Nhập câu hợp lệ</button></div><div class="qmeta" id="parseSummary" style="margin-top:7px"></div></div><div class="paste-preview" id="pastePreview">Bản xem trước và lỗi định dạng sẽ xuất hiện tại đây.</div></div></details>
 <details class="paste-box" id="importDetails"><summary>NHẬP CÂU HỎI TỪ TỆP</summary><div class="dropzone" id="dropzone"><strong>Thả tệp CSV, JSON hoặc TXT vào đây</strong><p class="qmeta">Tối đa 3 MB · Dữ liệu chỉ xử lý trên thiết bị</p><button class="btn small primary" id="chooseFileBtn">Chọn tệp</button><input class="hidden" type="file" id="fileInput" accept=".csv,.json,.txt,text/plain,application/json"></div><div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:9px"><button class="btn small ghost" id="csvTemplateBtn">Tải CSV mẫu</button><button class="btn small ghost" id="jsonTemplateBtn">Tải JSON mẫu</button><button class="btn small primary" id="confirmImportBtn" disabled>Xác nhận nhập</button></div><div class="paste-preview" id="filePreview" style="margin-top:9px;max-height:150px">Chưa có tệp được phân tích.</div></details></section>
 <div class="setup-footer"><div><strong id="readyLabel">Sẵn sàng xuống biển?</strong><div class="error" id="validation"></div></div><div><button class="btn warn" id="clearDataBtn">Xóa dữ liệu</button> <button class="btn ghost" id="restoreSamplesBtn">Khôi phục câu mẫu</button> <button class="btn primary" id="startGameBtn">Bắt đầu phục hồi →</button></div></div></div></main>
@@ -359,7 +394,7 @@ body.playing .audio-volume-control .icon{min-height:32px;height:32px;width:32px}
   </section>
 <section class="result-overlay hidden" id="resultOverlay"><div class="result-card"><div style="font-size:62px">🌊🪸🐢</div><h2>Rạn san hô đã hồi sinh!</h2><p id="resultSubtitle"></p><div class="result-stats" id="resultStats"></div><div class="result-actions"><button class="btn primary" id="replayBtn">Chơi lại</button><button class="btn ghost" id="retryWrongBtn">Làm lại câu sai</button><button class="btn ghost" id="answersBtn">Xem đáp án</button><button class="btn ghost" id="detailsBtn">Kết quả chi tiết</button><button class="btn ghost" id="resultCsvBtn">Tải CSV</button><button class="btn ghost" id="resultJsonBtn">Tải JSON</button><button class="btn ghost" id="printBtn">In / Lưu PDF</button><button class="btn ghost" id="changeQuestionsBtn">Đổi câu hỏi</button><button class="btn coral" id="libraryBtn">Kho trò chơi</button><button class="btn coral" id="resultHomeBtn">Trang chủ</button></div></div></section></main>
 
-<dialog id="questionDialog"><form method="dialog" id="questionForm"><div class="modal-head"><h3 id="editTitle">Thêm câu hỏi</h3><button class="icon" value="cancel" aria-label="Đóng">×</button></div><div class="modal-body"><div class="field-grid"><div class="field"><label for="editType">Loại câu hỏi</label><select id="editType"><option value="single">Một đáp án</option><option value="multi">Nhiều đáp án</option><option value="tf">Đúng – Sai</option><option value="fill">Điền khuyết</option><option value="short">Trả lời ngắn</option><option value="pair">Ghép cặp</option><option value="classify">Phân loại</option><option value="order">Sắp xếp</option><option value="image">Câu có hình ảnh</option></select></div><div class="field"><label for="editLevel">Mức độ</label><select id="editLevel"><option>Nhận biết</option><option>Thông hiểu</option><option>Vận dụng</option></select></div><div class="field full"><label for="editText">Nội dung</label><textarea id="editText" required></textarea></div><div class="field full"><label for="editOptions">Phương án / dữ liệu kéo thả, mỗi dòng một mục</label><textarea id="editOptions"></textarea><small id="editHint">Một phương án mỗi dòng.</small></div><div class="field full"><label for="editAnswer">Đáp án / đáp án tương đương</label><input id="editAnswer" placeholder="Ví dụ: 1 hoặc 1,3 hoặc san hô | rạn san hô"></div><div class="field"><label for="editTime">Thời gian</label><input id="editTime" type="number" min="0" value="30"></div><div class="field"><label for="editPoints">Điểm</label><input id="editPoints" type="number" min="1" value="100"></div><div class="field full"><label for="editExplanation">Lời giải</label><textarea id="editExplanation"></textarea></div><div class="field full hidden" id="editImageField"><label for="editImage">Ảnh minh họa (tối đa 1 MB)</label><input id="editImage" type="file" accept="image/png,image/jpeg,image/webp"><small id="editImageStatus">Chưa chọn ảnh.</small></div></div></div><div class="modal-foot"><span class="error" id="editError"></span><div><button class="btn ghost" value="cancel">Hủy</button> <button class="btn primary" id="saveQuestionBtn" value="default">Lưu</button></div></div></form></dialog>
+<dialog id="questionDialog"><form method="dialog" id="questionForm"><div class="modal-head"><h3 id="editTitle">Thêm câu hỏi</h3><button class="icon" value="cancel" aria-label="Đóng">×</button></div><div class="modal-body"><div class="field-grid"><div class="field"><label for="editType">Loại câu hỏi</label><select id="editType"><option value="single">Một đáp án</option><option value="multi">Nhiều đáp án</option><option value="tf">Đúng – Sai</option><option value="fill">Điền khuyết</option><option value="short">Trả lời ngắn</option><option value="classify">Phân loại</option><option value="order">Sắp xếp</option><option value="image">Câu có hình ảnh</option></select></div><div class="field"><label for="editLevel">Mức độ</label><select id="editLevel"><option>Nhận biết</option><option>Thông hiểu</option><option>Vận dụng</option></select></div><div class="field full"><label for="editText">Nội dung</label><textarea id="editText" required></textarea></div><div class="field full"><label for="editOptions">Phương án / dữ liệu kéo thả, mỗi dòng một mục</label><textarea id="editOptions"></textarea><small id="editHint">Một phương án mỗi dòng.</small></div><div class="field full"><label for="editAnswer">Đáp án / đáp án tương đương</label><input id="editAnswer" placeholder="Ví dụ: 1 hoặc 1,3 hoặc san hô | rạn san hô"></div><div class="field"><label for="editTime">Thời gian</label><input id="editTime" type="number" min="0" value="30"></div><div class="field"><label for="editPoints">Điểm</label><input id="editPoints" type="number" min="1" value="100"></div><div class="field full"><label for="editExplanation">Lời giải</label><textarea id="editExplanation"></textarea></div><div class="field full hidden" id="editImageField"><label for="editImage">Ảnh minh họa (tối đa 1 MB)</label><input id="editImage" type="file" accept="image/png,image/jpeg,image/webp"><small id="editImageStatus">Chưa chọn ảnh.</small></div></div></div><div class="modal-foot"><span class="error" id="editError"></span><div><button class="btn ghost" value="cancel">Hủy</button> <button class="btn primary" id="saveQuestionBtn" value="default">Lưu</button></div></div></form></dialog>
 <dialog id="infoDialog"><div class="modal-head"><h3 id="infoTitle">Hướng dẫn</h3><button class="icon" onclick="this.closest('dialog').close()">×</button></div><div class="modal-body" id="infoBody"></div><div class="modal-foot"><span></span><button class="btn primary" onclick="this.closest('dialog').close()">Đã hiểu</button></div></dialog>
 <div class="toast" id="toast" role="status"></div>
 
@@ -912,7 +947,7 @@ const SAMPLE_QUESTIONS=[
 {id:'o10',sample:true,selected:true,type:'fill',level:'Nhận biết',text:'Loài bò sát biển thường trở lại bãi cát để đẻ trứng là con ______.',answer:'rùa biển | rùa',explanation:'Rùa biển lên bãi cát để làm tổ và đẻ trứng.',time:30,points:100},
 {id:'o11',sample:true,selected:true,type:'multi',level:'Thông hiểu',text:'Chọn tất cả hành động góp phần bảo vệ đại dương.',options:['Dùng bình nước cá nhân','Phân loại rác','Bẻ san hô làm quà','Giảm túi nilon'],answer:[0,1,3],explanation:'Giảm đồ dùng một lần và phân loại rác giúp hạn chế ô nhiễm.',time:40,points:120},
 {id:'o12',sample:true,selected:true,type:'multi',level:'Nhận biết',text:'Chọn tất cả sinh vật có thể gặp trong hệ sinh thái biển.',options:['Cá hề','Rùa biển','Cá đuối','Hươu sao'],answer:[0,1,2],explanation:'Cá hề, rùa biển và cá đuối đều sống trong môi trường biển.',time:35,points:120},
-{id:'o13',sample:true,selected:true,type:'pair',level:'Thông hiểu',text:'Ghép sinh vật với đặc điểm phù hợp.',pairs:[['Cá hề','Sống gần hải quỳ'],['Rùa biển','Lên bờ đẻ trứng'],['San hô','Tạo nơi ở cho nhiều loài']],explanation:'Mỗi sinh vật có vai trò và đặc điểm riêng trong hệ sinh thái.',time:60,points:150},
+{id:'o13',sample:true,selected:true,type:'single',level:'Thông hiểu',text:'Đặc điểm nào phù hợp với rùa biển?',options:['Lên bờ đẻ trứng','Sống cố định trên san hô','Chỉ sống ở nước ngọt','Không cần hô hấp'],answer:0,explanation:'Rùa biển thường trở lại bãi cát để làm tổ và đẻ trứng.',time:60,points:150},
 {id:'o14',sample:true,selected:true,type:'classify',level:'Vận dụng',text:'Phân loại các vật vào nhóm phù hợp.',groups:['Có thể tái chế','Khó tái chế'],items:[['Chai nhựa','Có thể tái chế'],['Lon kim loại','Có thể tái chế'],['Túi nilon bẩn','Khó tái chế'],['Lưới hỏng lẫn tạp chất','Khó tái chế']],explanation:'Việc tái chế còn phụ thuộc vào tình trạng và quy định thu gom tại địa phương.',time:60,points:150},
 {id:'o15',sample:true,selected:true,type:'order',level:'Vận dụng',text:'Sắp xếp quy trình thu gom rác đúng thứ tự.',items:['Quan sát và bảo đảm an toàn','Thu gom rác','Phân loại','Đưa đến nơi xử lý'],explanation:'Cần bảo đảm an toàn trước, sau đó thu gom, phân loại và xử lý.',time:60,points:150}
 ];
@@ -1957,6 +1992,65 @@ AudioManager.prototype.applyVolume=function(value,updateMusic=true){
   return v;
 };
 /* ===== END AUDIO EXCLUSIVITY V11 ===== */
+
+/* ===== REMOVE PAIR QUESTION TYPE — including legacy saved data ===== */
+const pairReplacement=()=>clone(SAMPLE_QUESTIONS.find(q=>q.id==='o13'));
+const withoutPairQuestions=list=>{
+  const source=Array.isArray(list)?list:[];
+  const hasCurrentO13=source.some(q=>q?.id==='o13'&&q.type!=='pair');
+  let changed=false,replacedO13=hasCurrentO13;
+  const questions=[];
+  source.forEach(q=>{
+    if(q?.type!=='pair'){questions.push(q);return}
+    changed=true;
+    if(q.id==='o13'&&!replacedO13){questions.push(pairReplacement());replacedO13=true}
+  });
+  return{questions,changed};
+};
+const validateWithoutPair=QuestionManager.prototype.validate;
+QuestionManager.prototype.validate=function(q){
+  if(q?.type==='pair')return'Dạng ghép nối đã được loại bỏ.';
+  return validateWithoutPair.call(this,q);
+};
+const initWithoutPair=App.prototype.init;
+App.prototype.init=function(){
+  initWithoutPair.call(this);
+  const bank=withoutPairQuestions(this.questionManager.questions);
+  if(bank.changed){
+    this.questionManager.questions=bank.questions;
+    const maxQuestions=Math.max(1,bank.questions.length);
+    this.settings.data.questionCount=Math.min(Math.max(1,+this.settings.data.questionCount||1),maxQuestions);
+    this.settings.toForm();
+    this.questionManager.render();
+    StorageManager.save({settings:this.settings.data,questions:this.questionManager.questions});
+  }
+  const savedGame=StorageManager.loadGame();
+  if(savedGame?.questions?.some(q=>q?.type==='pair')){
+    const beforeCurrent=withoutPairQuestions(savedGame.questions.slice(0,Math.max(0,+savedGame.index||0))).questions.length;
+    const active=withoutPairQuestions(savedGame.questions);
+    if(active.questions.length){
+      savedGame.questions=active.questions;
+      savedGame.index=Math.min(beforeCurrent,active.questions.length-1);
+      savedGame.missions=this.missionManager.generate(active.questions.length);
+      StorageManager.saveGame(savedGame);
+    }else StorageManager.clearGame();
+    $('#continueBtn').classList.toggle('hidden',!StorageManager.loadGame());
+  }
+};
+const startWithoutPair=GameEngine.prototype.start;
+GameEngine.prototype.start=function(resume=null,customQuestions=null){
+  if(resume?.questions){
+    const sanitized=withoutPairQuestions(resume.questions);
+    if(!sanitized.questions.length){StorageManager.clearGame();app.show('setup');return}
+    resume={...resume,questions:sanitized.questions,index:Math.min(+resume.index||0,sanitized.questions.length-1),missions:app.missionManager.generate(sanitized.questions.length)};
+  }
+  if(Array.isArray(customQuestions)){
+    customQuestions=withoutPairQuestions(customQuestions).questions;
+    if(!customQuestions.length){toast('Không có câu hỏi phù hợp để bắt đầu.');return}
+  }
+  return startWithoutPair.call(this,resume,customQuestions);
+};
+/* ===== END REMOVE PAIR QUESTION TYPE ===== */
 
 const app=new App();document.addEventListener('DOMContentLoaded',()=>app.init());
 window.startGame=()=>app.start();window.pauseGame=()=>app.game.pause();window.resumeGame=()=>app.game.resume();window.resetGame=()=>{StorageManager.clearGame();app.animationManager.clear();app.reefManager.reset();app.show('setup')};window.exportQuestions=()=>app.exportQuestions();window.importQuestions=data=>app.importQuestions(data);window.getGameMetadata=()=>clone(GAME_METADATA);
